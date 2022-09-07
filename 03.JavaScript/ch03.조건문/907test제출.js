@@ -39,11 +39,18 @@ const year = 2000;
             {console.log(year,'평년');break;}
         else {console.log(year,'윤년'); }    
     default:
+           
+                 console.log(year,'평년') 
+        
+        }
+
+        /* 
+    default:
         if ( year % 100 === 0 ) 
             {console.log(year,'평년');break;}
         else {console.log(year,'윤년평년아님');break;}
     }
-
+ */
  
 
 
