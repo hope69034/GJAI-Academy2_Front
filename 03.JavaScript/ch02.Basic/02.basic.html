@@ -7,19 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="ptag">aaa</p>
+    <p id="ptag"></p>
+    <p id="ptag2"></p>
     <script>
-        alert('Hello World!!!'); //얼럿 작은창으로 경고메시지를 표시한다
-        prompt('Hello World!!!','ddd'); 
-        console.log('hello-consolelog'); //f12누르고 콘솔 누르면 뜨는 곳
-        document.write('hello-docuwrit');  //인터넷창에서 보이는 것
-        //let p = document.getElementById('ptag');
-        //p.innerText = 'ddddddddo innerText'; //피테그자리에 dddd를 넣는 것
-
-        //간단하게
-        document.getElementById('ptag').innerText='dddinnertext'; //피테그자리 aaa를 dddiner..로바꿈
-
-        
+        //alert('Hello World!!!');
+        //prompt('Message', 'Defstr');
+     //   console.log('Hello World!!! - console.log()');
+      //  document.write('Hello World!!! - document.write()');
+        document.getElementById('ptag').innerText = '<h1>Hello World!!! - innerText</h1>';
+        document.getElementById('ptag2').innerHTML = '<h1>Hello World!!! - innerHTML</h1>';
     </script>
 </body>
 </html>

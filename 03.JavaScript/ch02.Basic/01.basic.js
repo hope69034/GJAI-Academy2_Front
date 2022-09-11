@@ -22,6 +22,10 @@ console.log(stt);
 
 console.log(stt, stt[0], stt[2], stt[stt.length-1]);  // st[-1] 불가능  렝스-1로 마이너스인덱스가능
 
+
+
+
+
 let today = new Date();
 console.log(today, today.getFullYear(), today.getMonth()+1); //먼스는 -1로 나오기떄문에 +1을해줌
 //.getHours() 현재시간
@@ -47,18 +51,4 @@ console.log(typeof pi); //넘버 타입
 console.log(new Date().getFullYear()); //변수선언안하고쓰기
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 

@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+</head>
+<body style="margin: 50px;">
+    <input type="text"  id="num"  placeholder="정수를입력하세요"> 
+    <button onclick="evenOdd()">버튼</button> <!-- 클릭하면 이븐오드 함수를 작동 -->
+    <br><br><br><br><br><br><br><br><br><br>
+    <p id="result"></p>
+
     <script>
         function evenOdd() {
             const num = Number(document.getElementById('num').value); //.value 인풋값가져오기
@@ -17,12 +25,6 @@
             }
         }
     </script>
-</head>
-<body style="margin: 50px;">
-    <input type="text"  id="num"  placeholder="정수를입력하세요"> 
-    <button onclick="evenOdd()">버튼</button> <!-- 클릭하면 이븐오드 함수를 작동 -->
-    <br><br><br><br><br><br><br><br><br><br>
-    <p id="result"></p>
 </body>
 </html>
 

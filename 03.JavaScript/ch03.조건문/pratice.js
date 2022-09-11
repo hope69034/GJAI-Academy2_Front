@@ -1,37 +1,15 @@
- /* 
-/* const score = Math.ceil(Math.random()*100); */
-/* const score = Math.random()*100;
-const score2 = Math.ceil(Math.random()*100);
-console.log(score,score2)
- */
- /* 
+const byear = 1987
+const bmonth = 3
+const bday = 31 
 
-var val = 324.6;
-
-
-document.write("Math.ceil(val) : " +  Math.ceil(val) + "<br>"); */
-
-/* 
-let location;
-
-if (typeof document !== "undefined") {
-  location = document.location;
- */
-/* 
-  let location;
-  let windowTest;
-
-  if (process.browser) {
-    location = document.location;
-    windowTest = window.location.href;
-  }
- */
-  useEffect(() => {
-    console.log(document.location);
-    console.log(window.location.href);
-  }, []);
-
-
-const vv = 12
-console.log(vv)
-document.write(vv)
+const cyear = new Date().getFullYear()
+const cmonth = new Date().getMonth() + 1
+const cday = new Date().getDate()
+let age;
+if ((cmonth-bmonth) > 0 ) {age=cyear-byear} //생일지낫으면
+else if ((cmonth-bmonth) == 0 && (cday-bday) >= 0) {age=cyear-byear}
+else if ((cmonth-bmonth) == 0 && (cday-bday) < 0) {age=cyear-byear-1}
+else if ( (cmonth-bmonth) < 0  ) {age=cyear-byear-1} //생일안지낫으면
+console.log( 
+         `생일이 ${byear}년 ${bmonth}월 ${bday}일이면 만나이로 ${age}세 입니다.
+         오늘은 ${cyear}년 ${cmonth}월 ${cday}일이 입니다.`)

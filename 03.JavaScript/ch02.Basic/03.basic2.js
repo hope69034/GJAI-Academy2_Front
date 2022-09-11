@@ -18,6 +18,7 @@ console.log(a) //위에서 21로 바꼈으니 21로 출력
 // 강제 자료형변환
 console.log( Number('101')) //문자백일이 숫자 백일로 변환되어출력됨
 console.log( String(101)) //문자로
+
 console.log( Boolean(0), Boolean(1), Boolean(''), Boolean(undefined) )
 // 폴스 트루 폴스 폴스
 console.log( Boolean(0.0), Boolean(2), Boolean('str'),  )
@@ -39,20 +40,7 @@ console.log( 1+true) // 2
 console.log(  true +'bool') // truebool
 
 //일치연산자
-console.log (1==1.0) //true
-console.log (1 !==1.0) //false
-console.log (1===1.0) //true  ===는 자료형까지 같은지  > 둘다 넘퍼 타입이라 트루
-console.log (1=='1') //true
-console.log (1==='1')//false 타입이달라서폴스
-
-console.log (1  == '1' , 1 != '1' ) //true false
-console.log (1 === '1' , 1 !== '1' ) //false true
-
-
-
-
-
-
-
-
-
+console.log (1 ==  1.0 , 1 !=  1.0 ) // true false
+console.log (1 === 1.0 , 1 !== 1.0 ) // true false  // ===는 자료형까지 같은지  > 둘다 넘퍼 타입이라 트루
+console.log (1 ==  '1' , 1 !=  '1' ) // true false
+console.log (1 === '1' , 1 !== '1' ) // false true

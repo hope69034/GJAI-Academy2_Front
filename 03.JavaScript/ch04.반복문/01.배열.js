@@ -14,7 +14,6 @@ console.log(array.toString());
 
 //기본 for-loop 포문
 for (let i=0; i < array.length; i++) { // 포 ( 렛초기값, 조건, 증감분 )
-//아이가조건을만족하는동안반복문을실행
     console.log( i, array[i]) }
 
 //enhanced for-loop
@@ -23,7 +22,7 @@ for (let itemV of array) {
 }
 
 
-
+////////////////////////////////////////////////////
 
 //피타고라스 세변 a<b<c 에서 a+b+c=1000 을만족하는abc구하기
 
