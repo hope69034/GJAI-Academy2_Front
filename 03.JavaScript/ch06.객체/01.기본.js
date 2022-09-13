@@ -11,8 +11,8 @@ console.log(personInfo["name"])
 // 아래는 키에 "생략가능
 let maria= {name : "마리아", age :24, gender :"여자"};
 console.log(maria.age);
-
-//key 값ㅇ르 변수(문자열)로 받는 경우 
+ 
+//key 값을 변수(문자열)로 받는 경우 
 const key = "age";
-console.log(maria[key]);
+console.log(maria[key]); // 마리아객체의 키 age 의 밸류 출력
 

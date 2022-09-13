@@ -1,3 +1,4 @@
+ 
 const array = [52, 273.1, '아침밥','점심밥',true,false] //넘버 문자 불 타입
 console.log(array[0], array[2], ); // - 마이너스인덱스사용불가
 console.log(array.length); // 렝스길이 = 6 이니까
@@ -36,3 +37,5 @@ if (a+b+c == 1000 && a*a + b*b == c*c ) { console.log(a,b,c,a+b+c)}
         }
 }
 }
+
+ 

@@ -51,3 +51,5 @@ cart.add(mouse, 4); //마우스4개담기
 cart.add(usb, 10)
 cart.add(monitor, 2)
 console.log(cart.toString()) //670000
+
+
