@@ -5,12 +5,12 @@ setTimeout(  function () {
 , 3000    //3초후로설정  밀리세컨드
 );
 
-
 // 시간간격(interval) -주기적으로실행
 const si = setInterval( () => {
     console.log(new Date());
 }, 1000); //1초
 
+// 주기적으로 실행되는 것을 멈춤
 setTimeout(()=>{
     clearInterval(si);
 },5000); //5초에 끝난다
