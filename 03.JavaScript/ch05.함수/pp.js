@@ -1,19 +1,9 @@
-function callFiveTimes(callba1){
-    for (let i=0; i<2; i++){
-        callba1();
-    }
-}
-const cb = function ct() {
-    console.log('함수호출완료');
-}
-
-// 아래 3개 모두 같은 함수
-callFiveTimes(cb);
-
-callFiveTimes(function() {
-    console.log('함수호출완료');
-});
-
-callFiveTimes( () =>   {
-    console.log('함수호출완료');
-});
+// 시간간격(interval) -주기적으로실행   setInterval( function () {console.log(new Date());} , 3000 );
+const si = setInterval( () => {
+    console.log(new Date());
+}, 1000); //1초
+// 주기적으로 실행되는 것을 멈춤
+setTimeout(()=>{
+    clearInterval(si);
+},5000); //5초에 끝난다
+//자바스크립트느 비동기방식이라 동시에 전부 실행

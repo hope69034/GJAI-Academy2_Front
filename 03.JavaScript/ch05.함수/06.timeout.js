@@ -1,11 +1,9 @@
 // 타임아웃 설정 (콜백)
-setTimeout(  function () {
-    console.log('타임아웃발생(3초후)');
-}
-, 3000    //3초후로설정  밀리세컨드
+setTimeout(  
+    function () {console.log('타임아웃발생(3초후)');} , 3000    //3초후로설정  밀리세컨드
 );
 
-// 시간간격(interval) -주기적으로실행
+// 시간간격(interval) -주기적으로실행   setInterval( function () {console.log(new Date());} , 3000 );
 const si = setInterval( () => {
     console.log(new Date());
 }, 1000); //1초
