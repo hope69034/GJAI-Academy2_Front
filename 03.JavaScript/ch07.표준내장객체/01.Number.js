@@ -22,7 +22,8 @@ console.log(Number.MAX_VALUE ) //굉장히큰실수
 console.log(Number.MIN_VALUE) //굉장히작은소수
 
 console.log(Number.NEGATIVE_INFINITY) //음의무한대
-console.log(Number.MAX_SAFE_INTEGER,Number.MIN_SAFE_INTEGER,) 
+console.log(Number.MAX_SAFE_INTEGER,Number.MIN_SAFE_INTEGER,)
+
 // 2의 53승 빼기1, -2의 53승+1  
     //안정적으로표현가능한숫자를말함
 

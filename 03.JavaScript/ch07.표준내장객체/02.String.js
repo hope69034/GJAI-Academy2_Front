@@ -27,7 +27,7 @@ let clockfinal=[];
 for( let i = 0; i <= 2; i++ ) {
     for( let k = 0; k <= 9; k++ ) {
         clock = String(i)+String(k)
-        if (clock <= 24) { 
+        if (clock < 24) { 
             for( let j = 0; j <= 6; j++ ) {
                 for( let p = 0; p <= 9; p++ ) {
                 clock2 = String(j)+String(p)
@@ -49,24 +49,47 @@ for (let i of clockfinal) {
    else if (i[1] == 3){result.push(i)}
    else if (i[0] == 3){result.push(i)}
 }
-console.log("###")
-/* console.log(result.length) */
-console.log("###")
+   
 
- 
-/* r2=0;
-r2=0
-r2=0
-r2=0
-for (let k of result) {
-    if   (k[3] == 3) { result2 += 1 } 
-    else  if   (k[2] == 3) { result2 += 60 } 
-    else  if    (k[1] == 3) { result2 += 3600 }
+// 1) 배열을 거꾸로 만드는 함수
+function reversString(array) {
+    let result_reverse=[];
+    for ( let i = array.length-1; i>=0; i--) { //끝인덱부터 -1씩하면서 첫인덱스까지 오기
+        result_reverse.push(array[i]); }                 //끝인덱부터 앞에서부터 넣어줌
+    return result_reverse;
+   
+}
+let result_reverse=reversString(result); //거꾸로만들고
+ console.log(result_reverse)
+//1인덱스이상
+  rr=[]
+for (let i in result_reverse){
+    if(i >= 1) {
+    rr.push(result_reverse[i])
+    }
+}  
+console.log(rr)
+
+
+result2=[];
+for (let k of rr) {
+    if    (k[1] == 3) { result2.push(60) }
+    else  if   (k[2] == 3) { result2.push(60) }
+    else if   (k[3] == 3) { result2.push(60) } 
 }
  
-console.log(result2) */ // 510450 ?
+console.log("#############################################")
+let sum = 0;
+for (let i = 0; i < result2.length; i++) {
+    sum += Number(result2[i]);
+}
+console.log(sum); // 29820
+console.log(rr[rr.length-1])
 
 //정답  29700
+console.log("#############################################")
+
+
 
 
 

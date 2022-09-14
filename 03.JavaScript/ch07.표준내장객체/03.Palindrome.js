@@ -83,7 +83,7 @@ console.log(m)
 
 var max = res.reduce(function(a, b) {
     return Math.max(a, b);
-}, -Infinity);
+}, -Infinity)
 console.log(max)
 
 
