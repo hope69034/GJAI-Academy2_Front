@@ -23,9 +23,6 @@ console.log(Math.max(numbers));
 console.log(Math.max(...numbers)); //매스맥스함수는 파라미터가 뭉치로와야한다
 
 
-
-
-
 // 3. let, const
 // 4. template literals   (에프스트링 ``) 
 // 5. 삼항연산자
@@ -41,3 +38,6 @@ mySet.add(1)
 console.log(mySet) // 1 3
 console.log(mySet.has(3)) //true    3을가지고잇는지묻는
 console.log(mySet.size)  //렝스대신 size()
+
+
+
