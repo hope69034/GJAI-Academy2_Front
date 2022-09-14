@@ -15,8 +15,8 @@ for (let i=0; i < cars.length; i++) {
     //원소하나를뽑고 첫공백인덱스미만까지는 매뉴팩처러로 푸시
     manufacturer.push( cars[i].slice(0, cars[i].indexOf(" "))  )  // 이상미만 슬라이스
     //첫공백인덱초과 부터 끝인덱까지 모델로 푸시
-    model.push( cars[i].slice( cars[i].indexOf(" ")+1 , cars[i].length  ) )  //슬라이스끝인덱 미만으로 잡아주는거니까 카아이렝스에서 -1안해야함
-}
+    model.push( cars[i].slice( cars[i].indexOf(" ")+1 ,   ) )  //슬라이스끝인덱 미만으로 잡아주는거니까 카아이렝스에서 -1안해야함
+}   // 슬라이스함수 : 끝점 안잡아주면 시작부터 끝까지 감
 
 //답 제출
 console.log(`문제4답:`)

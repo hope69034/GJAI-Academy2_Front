@@ -152,7 +152,7 @@ for (let i=0; i < cars.length; i++) {
     manufacturer.push( cars[i].slice(0, cars[i].indexOf(" "))  )  // 이상미만 슬라이스
     //첫공백인덱초과 부터 끝인덱까지 모델로 푸시
     model.push( cars[i].slice( cars[i].indexOf(" ")+1 , cars[i].length  ) )  //슬라이스끝인덱 미만으로 잡아주는거니까 카아이렝스에서 -1안해야함
-}
+} //슬라이스함수 시작점만 잡아주고 끝점 생략하면 자동으로 시작부터 끝까지 가기 때문에 cars[i].length 생략가능 
 
 //답 제출
 console.log(`문제4답:`)

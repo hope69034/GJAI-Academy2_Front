@@ -10,18 +10,25 @@ const cars =
   "ford torino"       ];
 
 //맵활용
-const manufacturer = cars.map ( 
-    (str) => 
-    (     
-        str.slice(0 , str.indexOf(" "))      
-    )  
-)     
+/* const manufacturer = cars.map(function(x) {
+    return x.split(' ')[0];
+});  */   
+const manufacturer = cars.map(x => x.split(' ')[0]);
 console.log(manufacturer)
 
-const model = cars.map ( 
-    (str) => 
-    (     
-        str.slice( str.indexOf(" ")+1 , str.length  )    
-    )  
-)     
+/* const model = cars.map(function(str) {
+    return str.slice( str.indexOf(" ")+1)    
+}); */   
+/* const model = cars.map(x => x.split(' ').slice(1).join(' '));  */
+//공백기준 스플릿 후 슬라이스로 1인덱부터 끝까지 슬라이스 후 조인할 때 공백하나를 주고 조인 
+ 
+
+/* 
+const model = cars.map(function(str) {
+    return str.slice( str.indexOf(" ")+1)    
+}); */
+
+/* const model = cars.map( x => x.slice(x.indexOf(" ")+1) ); */
+const model = cars.map( x => x.split(' ').slice(1).join(' '));
+//공백기준 스플릿 후 슬라이스로 1인덱부터 끝까지 슬라이스 후 조인할 때 공백하나를 주고 조인 
 console.log(model)
