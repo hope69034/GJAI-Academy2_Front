@@ -3,7 +3,7 @@ console.log(today);
 console.log(today.toString());
 console.log(today.toLocaleString());
 console.log(today.toDateString());
-
+console.log(123123123)
 // 22-09-14 09:16:45
 function myLocawlTimeFormat(date){
     let result="";
