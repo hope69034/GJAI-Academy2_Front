@@ -6,6 +6,7 @@ random number로 두개의 정수가 주어집니다.(첫번째 값의 범위는
 
 // 두 난수 범위 설정
 const number1 =  Math.floor(Math.random() *20) +1 ; // 1~20
+////Math.ceil(Math.random()*20)
 const number2 =  Math.floor(Math.random() *21) +10; // 10~30
 console.log(number1,number2)
  
@@ -27,7 +28,7 @@ function star(number1, number2) {
     console.log(`문제1답: ${array}`)
 }
 
-//펑션2 선언
+//펑션2 선언 재귀함수 넘버리셋
 function star2() {
     const number1 =  Math.floor(Math.random() *20) +1 ; // 1~20
     const number2 =  Math.floor(Math.random() *21) +10; // 10~30
@@ -89,6 +90,7 @@ random number로 10보다 크고 100보다 작은 두개의 정수가 주어집�
 //난수범위 10초과~100미만 인 두개의 정수 선언
 const num1 = Math.floor(Math.random() *89) +11 ;
 const num2 =  Math.floor(Math.random() *89) +11 ;
+//floor는 소수점버림
 /* console.log(num1)
 console.log(num2) */
 

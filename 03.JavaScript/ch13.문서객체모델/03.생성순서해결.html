@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성순서오류해결</title>
+     <script> //이코드는 에이치원 에이치투 태그가 생성하기전에 호출해서 에러가 밝생
+        function handler(){
+            document.querySelector("h1").style.backgroundColor="yellow"    
+            document.querySelector("h2").style.backgroundColor="red"  
+        } 
+      //  window.onload=handler;  //펑션실행 //이벤트헨들러등록 이건()가업ㅈㅅ음
+    </script>  
+</head>
+
+<body onload="handler()"> <!--이벤트가발생하면핸들러호출 ()가잇음-->
+    <h1>header 1</h1>
+    <h2>header 2</h2>
+</body>
+</html>
