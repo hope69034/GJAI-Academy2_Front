@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>event</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+   <script>
+      
+      //클릭시 얼럿창
+      $(document).ready(function(){
+         $("h1").on("click",function(event){
+            alert($(this).text());
+         })
+      });
+
+      //커서대면백그라운드색변경
+      $(document).ready(function(){
+         $("h1")
+            .on("mouseenter",function(event){$("h1").css("background","red")})
+            .on("mouseleave",function(event){$("h1").css("background","blue")})    
+      });                                        
+   </script>
+</head>
+<body style="margin: 50px;">
+   <h1>Header A</h1>
+   <h1>Header B</h1>
+   
+</body>
+</html>
