@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>test_09_16</title>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   
+   <script>
+
+      $(document).ready(function(){
+
+         //question1
+         $(".show1").click(function(answer1){  //클래스 쇼1 클릭
+            const first = parseInt(document.getElementById('first').value);
+            const second = parseInt(document.getElementById('second').value);
+            console.log(first, second);
+            let result = [];
+            for (let i=first; i<=second; i++) {
+               if (i == first+1 || i == second-1)
+                  continue;
+               result.push(Math.pow(2, i));
+            }
+            
+            document.getElementById('result1').innerHTML = result.join(', ');
+         });
+            
+            $(".hide1").click(function(e){  //클래스하이드셀렉
+               $("p1").hide();  //하면 하이드()를써라
+         });
+            $(".show1").click(function(e){  //클래스하이드셀렉
+               $("p1").show();  //하면 하이드()를써라
+         });   
+
+          //question2
+         $(".show2").click(function(answer2){ 
+            const text = document.getElementById('text').value;
+            const noPunct = text.replace(/[-',.]/g, '').replace(/\n/g, ' ');    // 구둣점 제거, 줄바꿈은 공백으로 변경
+            console.log(noPunct);
+            const words = noPunct.split(' ');
+            let count = 0;
+            for (let word of words) {
+            if (word == 'the')
+                  count++;
+            }
+            document.getElementById('result2').innerHTML = `the의 갯수는 <strong>${count}</strong>개`;
+         });
+
+            $(".hide2").click(function(e){  //클래스하이드셀렉
+               $("p2").hide();  //하면 하이드()를써라
+         });
+            $(".show2").click(function(e){  //클래스하이드셀렉
+               $("p2").show();  //하면 하이드()를써라
+         });      
+         
+          //question3
+         $(".show3").click(function(answer3){ 
+            const num1 = parseInt(document.getElementById('num1').value);
+            const num2 = parseInt(document.getElementById('num2').value);
+            const divisors1 = [];
+            for (let i=1; i<=num1; i++) {
+               if (num1 % i == 0)
+                divisors1.push(i);          // num1의 약수
+            }
+            const divisors2 = [];
+            for (let i=1; i<=num2; i++) {
+               if (num2 % i == 0)
+                    divisors2.push(i);      // num2의 약수
+            }
+            const commonDivisors = divisors1.filter(val => divisors2.includes(val));
+            document.getElementById('result3').innerHTML = `Set(${commonDivisors.join(', ')})`;
+         });
+
+         $(".hide3").click(function(e){  //클래스하이드셀렉
+            $("p3").hide();  //하면 하이드()를써라
+         });
+         $(".show3").click(function(e){  //클래스하이드셀렉
+            $("p3").show();  //하면 하이드()를써라
+         });    
+
+      });  
+
+   </script>
+
+</head>
+
+<body style="margin-left: 50px;">
+
+   <!-- question1 -->
+   <div id="show"></div>
+   <div id="Q1">
+      <h3>문제1</h3>
+      <p>두개의 정수를 입력으로 받습니다.(첫번째 값의 범위는 1~20, 
+         두 번째 값의 범위는 10~30이며 첫 번째 값은 두 번째 값보다 4 이상 작아야 합니다).<br>
+         첫 번째 정수부터 두 번째 정수까지를 지수로 하는 2의 거듭제곱 배열을 
+         출력하는 프로그램을 만드세요.<br> 
+         단, 배열의 두 번째 요소와 뒤에서 두 번째 요소는 삭제한 뒤 출력하세요.</p>
+      <hr>
+      
+      <p1>
+         <input type="number" id="first" placeholder="1~20 사이의 정수">
+         <input type="number" id="second" placeholder="10~30 사이의 정수">
+         <button class="show1">입력</button>
+         <p id="result1"></p>
+      </p1>
+   </div>
+   <button class="hide1">메세지감추기</button>
+   <button class="show1">메세지보이기</button>
+
+   <!-- question2 -->
+   <div id="Q2" style="margin-top: 30px;">
+      <h3>문제2</h3>
+      <p>문자열을 입력으로 받습니다.<br>
+         문자열에서 'the'의 개수를 출력하는 프로그램을 만드세요.<br>
+         단, 모든 문자가 소문자인 'the'만 찾으면 되며 
+         'them', 'there', 'their' 등은 포함하지 않아야 합니다.</p>
+      <hr> 
+      <p2>
+         <textarea id="text" cols="100" rows="10"></textarea>
+         <button class="show2">입력</button>
+         <p id="result2"></p>
+      </p2>
+   </div>
+   <button class="hide2">메세지감추기</button>
+   <button class="show2">메세지보이기</button>
+
+   <!-- question3 -->
+   <div id="Q3" style="margin-top: 30px;">
+      <h3>문제3</h3>
+      <p>10보다 큰 정수 두개를 입력으로 받습니다.<br>
+         두 숫자의 공약수를 세트 형태로 구하도록 프로그램을 작성하세요.</p>
+         <hr>
+      <p3>
+         <input type="number" id="num1" placeholder="10보다 큰 정수">
+         <input type="number" id="num2" placeholder="10보다 큰 정수">
+         <button class="show3">입력</button>
+         <p id="result3"></p>
+      </p3>
+   </div>
+   <button class="hide3">메세지감추기</button>
+   <button class="show3">메세지보이기</button>
+
+</body>
+
+</html>
