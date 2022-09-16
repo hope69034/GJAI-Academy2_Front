@@ -4,15 +4,10 @@ random number로 두개의 정수가 주어집니다.(첫번째 값의 범위는
 첫 번째 정수부터 두 번째 정수까지를 지수로 하는 2의 거듭제곱 배열을
 출력하는 프로그램을 만드세요. */
 
-// 두 난수 범위 설정
-const number1 =  Math.floor(Math.random() *20) +1 ; // 1~20
-const number2 =  Math.floor(Math.random() *21) +10; // 10~30
-console.log(number1,number2)
- 
+// 두 난수 범위 설정 
 // 첫번째 값이 두번째보다 4이상 작아야 한다
 // 성립할때까지돌린다
 
-//펑션1 선언
 function star(number1, number2) {
     let array = [];
     if (number1 <= number2 -4 ) {
@@ -26,7 +21,6 @@ function star(number1, number2) {
     console.log(`문제1답: ${array}`)
 }
 
-//펑션2 선언
 function star2() {
     const number1 =  Math.floor(Math.random() *20) +1 ; // 1~20
     const number2 =  Math.floor(Math.random() *21) +10; // 10~30
@@ -35,10 +29,4 @@ function star2() {
     else {star2()}
 }
 
-//메인문
-if (number1 <= number2 -4 ) {
-    star(number1,number2)
-}
-else {
-    star2()
-}
+star2()

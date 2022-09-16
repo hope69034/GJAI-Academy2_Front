@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <title>키보드이벤트</title>
+   <script>
+      //어떤이벤트가발생햇는지알아보기
+      
+      $(document).ready(function(){
+         //인풋태그    //keypress로 - 한단계늦다
+         $("input").on("keyup", function(e){$("#keyup").html($(this).val());})
+                  .on("change",function(e){$("#change").html($(this).val());});
+      });
+   </script>
+</head>
+<body>
+   입력: <input type="text">
+   <hr>
+   글자입력할떄마다어떤글자가입력되었는지<p id="keyup"></p>
+   글자를입력하고엔터를쳤을때:       <p id="change"></p>                                                                                                               
+</body>
+</html>

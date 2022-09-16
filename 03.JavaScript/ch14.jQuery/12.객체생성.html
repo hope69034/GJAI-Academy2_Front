@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  
+   <title>객체생성</title>
+   <script>
+      $(document).ready(function(){
+         /* $("h1").on("click",function(e){ //첫줄에서만객체생성가능
+            $("<h1></h1>").text($(this).text()).appendTo("body");
+         }); */
+
+      const handler = function(e) {
+         $("<h1></h1>")
+            .text($(this).text())
+            .on("click",handler)
+            .appendTo("body");
+      } 
+      //$("h1").on("click",handler); //모든줄에서가능
+      $("h1").click(handler); //같은코드
+
+         });
+
+   </script>
+</head>
+<body style="margin: 50px;">
+   <h1>header</h1>
+</body>
+</html>
