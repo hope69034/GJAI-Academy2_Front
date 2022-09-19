@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>location객체</title>
+    <title>Location 객체</title>
     <script>
-        let info = `href:${location.href}\n`
-        info += `pathname:${location.pathname}\n`
+        let info = `href: ${location.href}\n`;
+        info += `pathname: ${location.pathname}\n`;
+
         alert(info);
 
-        function delayed(){
-            setInterval(()=>location="http:\\www.hanbit.co.kr",3000)
+        function delayedMove() {
+            setInterval(() => location = 'http://www.hanbit.co.kr', 3000);
         }
     </script>
 </head>
 <body style="margin: 50px;">
-    <button onclick="location.href='http:\\www.hanbit.co.kr'">
-        버튼
-    </button>
-    <button onclick="delayed()">버튼2 3초후이동</button>
+    <button onclick="location.href='http://www.hanbit.co.kr'">버튼</button>
+    <button onclick="delayedMove()">버튼(지연 이동)</button>
     <button onclick="history.forward()">앞으로</button>
-    <button onclick="history.backward()">뒤로</button>
+    <button onclick="history.back()">뒤로</button>
 </body>
 </html>
-

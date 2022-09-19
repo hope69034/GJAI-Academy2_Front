@@ -11,39 +11,28 @@
       
       $(document).ready(function(){
 
+         countDown()
+
+//시작하면 바로 숨기고 시작하기         
+         $("p1").hide();  
+         $("p2").hide();  
+         $("p3").hide();  
+
 //인풋과 리턴란 보이기 숨기기
-         $(".hide1").click(function(e){  //클래스하이드셀렉
-            $("p1").hide();  
-         });
-         $(".show1").click(function(e){  //클래스하이드셀렉
-            $("p1").show();  
-         }); 
-         $(".hide2").click(function(e){  //클래스하이드셀렉
-            $("p2").hide();  
-         });
-         $(".show2").click(function(e){  //클래스하이드셀렉
-            $("p2").show();  
-         }); 
-         $(".hide3").click(function(e){  //클래스하이드셀렉
-            $("p3").hide();  
-         });
-         $(".show3").click(function(e){  //클래스하이드셀렉
-            $("p3").show();  
-         });    
+         $(".hide1").click(function(e){$("p1").hide();});
+         $(".show1").click(function(e){$("p1").show();}); 
+         $(".hide2").click(function(e){$("p2").hide();});
+         $(".show2").click(function(e){$("p2").show();}); 
+         $(".hide3").click(function(e){$("p3").hide();});
+         $(".show3").click(function(e){$("p3").show();});    
 
 //버튼 눌렀을 때 얼럿 안내문
-         $(".input1").click(function(e){  //클래스하이드셀렉
-            alert('확인을 누르면 3초 후 결과가 출력!!!');
-         });
-         $(".input2").click(function(e){  //클래스하이드셀렉
-            alert('확인을 누르면 3초 후 결과가 출력!!!');
-         });  
-         $(".input3").click(function(e){  //클래스하이드셀렉
-            alert('확인을 누르면 3초 후 결과가 출력!!!');
-         });
+         $(".input1").click(function(e){alert('확인을 누르면 3초 후 결과가 출력!!!');});
+         $(".input2").click(function(e){alert('확인을 누르면 3초 후 결과가 출력!!!');});  
+         $(".input3").click(function(e){alert('확인을 누르면 3초 후 결과가 출력!!!');});
 
-//펑션end
       });  
+
    </script>
 </head>
 
@@ -106,24 +95,34 @@
 
 <!-- 시작카운트다운 3초 -->   
    <script>
-      let count = 3;
-      const show = document.getElementById('show');
+/*       let count = 3;
+      const show = $('#show');
 
       function disp(num) {
-         const img = document.createElement('img');
+         $("<img></img>")
+            .attr("src",'./'+num+'.svg')
+            .attr("width", "800")
+            .attr("id","second")
+            .css({marginTop:"30px",marginBottom:"200px",marginLeft:"200px"})
+            .appendTo(show)
+               
+          const img = document.createElement('img');
          img.setAttribute('src', './'+num+'.svg');
          img.setAttribute('width', '800');
          img.setAttribute('id', 'second');
          img.style.marginTop = '30px';
          img.style.marginBottom = '200px';
          img.style.marginLeft = '200px';
-         show.appendChild(img);
+         show.appendChild(img); 
       }
+      
       function hide() {
-         const sec = document.getElementById('second');
-         show.removeChild(sec);
-      }
-      function countDown() {
+         /*const sec = $('#second');
+         show.children().remove();*/
+        // show.removeChild(sec);
+       
+      
+     /* function countDown() {
          alert("확인을 누르시면 3초 카운트 다운을 시작합니다.");
          disp(count--);
          let interval = setInterval(() => {
@@ -135,8 +134,9 @@
                clearInterval(interval);
          }, 3000);
          
-      }
-      window.onload = countDown; //카운트다운실행
+      /*}*/
+   
+     /* window.onload = countDown; 카운트다운실행 */
    </script>
 </body>
 </html>

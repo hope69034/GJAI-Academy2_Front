@@ -6,9 +6,9 @@ for (let c = 1; c < 1000; c++) {
         for (let a = 1; a < b; a++) {
             if (a*a + b*b == c*c) {
                 console.log(a, b, c);
+            
             }
         }
     }
 }
 
- 

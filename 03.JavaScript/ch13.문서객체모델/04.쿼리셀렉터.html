@@ -4,28 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>쿼리셀렉터</title>
+    <title>Query Selector</title>
     <script>
-        window.onload=function(){
-            //첫에이치원태그찾기
-            const h1=document.querySelector("h1"); //h1 탑 하나만찾기
-            h1.style.backgroundColor="yellow";
-//모든에이치원태그찾아서배열로만들어줌
-            const h1s=document.querySelectorAll("h1"); //배열 //h1전부찾기
-            for (let header of h1s){
-                header.style.color= "red";
+        window.onload = function() {
+            // 첫번째 h1 태그 찾기
+            const h1 = document.querySelector('h1');
+            h1.style.backgroundColor = 'yellow';
+            // 모든 h1 태그 찾아서 배열로 만들어줌
+            const h1s = document.querySelectorAll('h1');    // 배열
+            for (let header of h1s) {
+                header.style.color = 'red';
             }
-            //클래스 last인노드찾기
-            document.querySelector(".last").innerHTML="from javascript";
-
-
+            // 클래스 값이 last인 노드 찾기
+            document.querySelector('.last').innerHTML = 'From Javascript';
         }
-    </script> 
+    </script>
 </head>
-<body style="margin:50px">
-    <h1>header 1</h1>
-    <h1>header 1</h1>
-    <h1 class="last">header 1</h1>
-        
+<body style="margin: 50px;">
+    <h1>Header 1</h1>
+    <h1>Header 1</h1>
+    <h1 class="last">Header 1</h1>
 </body>
 </html>

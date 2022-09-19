@@ -1,7 +1,63 @@
+
+
+let count = 3;
+var show;
+$(document).ready(function() {
+    show = $('#show');
+});
+
+
+function disp(num)  {
+
+    $("<img></img>")
+        .attr("src",'./'+num+'.svg')
+        .attr("width", "800")
+        .css({marginTop:"30px",marginBottom:"200px",marginLeft:"200px"})
+        .appendTo(show)
+}
+   /* const img = document.createElement('img');
+   img.setAttribute('src', './'+num+'.svg');
+   img.setAttribute('width', '800');
+   img.setAttribute('id', 'second');
+   img.style.marginTop = '30px';
+   img.style.marginBottom = '200px';
+   img.style.marginLeft = '200px';
+   show.appendChild(img); */
+ 
+
+ 
+function hide() {
+   
+    show.children().remove();
+}
+
+function countDown() {
+   alert("확인을 누르시면 3초 카운트 다운을 시작합니다.");
+   disp(count--);
+   let interval = setInterval(() => {
+         hide();
+         if (count != 0) 
+            disp(count--);
+   }, 1000);
+   setTimeout(() => {
+         clearInterval(interval);
+   }, 3000);
+   
+}
+
+
+
+
+
+
+
+
+
+
+
 //question1
 // jQuery버전
 function answer1() {
-    $(".input1").click(function(answer1){  //클래스 쇼1 클릭
         const first = parseInt($('#first').val());
         const second = parseInt($('#second').val());
         console.log(first, second);
@@ -15,12 +71,10 @@ function answer1() {
         setTimeout(function () {
             $('#result1').html(result.join(', '));
         } , 3000);
-    });  
 };
 //question2
 // jQuery버전
 function answer2() {
-    $(".input2").click(function(answer2){ 
         const text = $('#text').val();
         const noPunct = text.replace(/[-',.]/g, '').replace(/\n/g, ' ');    // 구둣점 제거, 줄바꿈은 공백으로 변경
         console.log(noPunct);
@@ -34,12 +88,10 @@ function answer2() {
         setTimeout(function () {
             $('#result2').html(`the의 개수는 <strong>${count}</strong>개`);
         } , 3000);
-    });
 };  
 //question3
 // jQuery버전
 function answer3() {
-    $(".input3").click( function(answer3) { 
         const num1 =  $('#num1').val() ;
         const num2 = $('#num2').val();
         const divisors1 = [];
@@ -56,8 +108,7 @@ function answer3() {
         //리턴에 3초 딜레이걸기
         setTimeout(function () {
             $('#result3').html(`Set(${commonDivisors.join(', ')})`);
-        } , 3000);
-    });    
+        } , 3000);  
 };
 
 
